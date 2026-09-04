@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You for Another Chance</title>
+  <style>
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; font-family:"Century Gothic",Arial,sans-serif; background:linear-gradient(145deg,#f8dfe3,#f3bfc8); color:#4b3337; display:flex; align-items:center; justify-content:center; padding:24px; }
+    .card { width:min(680px,100%); background:rgba(255,255,255,.97); border-radius:24px; padding:46px 36px; text-align:center; box-shadow:0 18px 55px rgba(95,46,58,.16); }
+    .heart { font-size:3rem; } h1 { color:#6b3b46; font-size:clamp(2rem,5vw,3rem); } p { line-height:1.8; font-size:1.08rem; }
+    .photo-slot { margin:26px auto; max-width:520px; border-radius:18px; overflow:hidden; background:#fbf2f4; border:2px dashed #ddb5be; }
+    .photo-slot img { width:100%; max-height:390px; object-fit:cover; display:block; }
+    .placeholder { padding:48px 20px; color:#9a7079; font-size:.95rem; }
+    .photo-slot:not(.missing) .placeholder { display:none; }
+    .note { margin-top:24px; padding:20px; border-radius:16px; background:#fbf2f4; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="heart">♡</div>
+    <h1>Thank you for giving us another chance.</h1>
+
+    <!-- FINAL IMAGE SLOT: put your favourite photo at images/07-favourite.jpg -->
+    <figure class="photo-slot">
+      <img src="images/07-favourite.jpg" alt="My favourite photo of us" onerror="this.style.display='none'; this.parentElement.classList.add('missing');" />
+      <div class="placeholder">Add your favourite photo as <strong>images/07-favourite.jpg</strong></div>
+    </figure>
+
+    <p>I know saying yes does not make everything instantly okay, and I do not expect it to. I want to take this slowly and let my actions show you how serious I am about doing better.</p>
+    <div class="note">I choose you — and this time I want to choose patience, honesty, respect and consistency too.</div>
+    <p>Thank you for trusting me with another chance, RaeRae. I’ll treasure it.</p>
+  </main>
+</body>
+</html>

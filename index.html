@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You, RaeRae</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; font-family: "Century Gothic", Arial, sans-serif;
+      background: linear-gradient(145deg, #f8dfe3, #f3bfc8); color: #4b3337;
+      display: flex; align-items: center; justify-content: center; padding: 24px;
+    }
+    .card { width: min(680px, 100%); background: rgba(255,255,255,.95); border-radius: 24px; padding: 44px 34px; text-align: center; box-shadow: 0 18px 55px rgba(95,46,58,.16); }
+    .heart { font-size: 2.2rem; margin-bottom: 10px; }
+    h1 { margin: 0 0 18px; font-size: clamp(2rem, 6vw, 3.2rem); color: #6b3b46; }
+    p { font-size: 1.08rem; line-height: 1.75; margin: 0 auto; max-width: 560px; }
+    .photo-slot { margin: 26px auto 4px; max-width: 520px; border-radius: 18px; overflow: hidden; background: #fbf2f4; border: 2px dashed #ddb5be; }
+    .photo-slot img { width: 100%; max-height: 390px; object-fit: cover; display: block; }
+    .placeholder { padding: 48px 20px; color: #9a7079; font-size: .95rem; }
+    .photo-slot:not(.missing) .placeholder { display: none; }
+    .buttons { margin-top: 30px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 13px 22px; border-radius: 999px; text-decoration: none; font-weight: 700; transition: transform .18s ease, box-shadow .18s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(88,45,55,.15); }
+    .primary { background: #c86478; color: white; }
+    .secondary { background: #f3e7e9; color: #6b3b46; }
+    .small { margin-top: 20px; font-size: .9rem; color: #86636b; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="heart">♡</div>
+    <h1>RaeRae, I owe you an apology.</h1>
+    <p>I know I hurt you, and I know a website cannot undo that. I made this because there are things I need to say properly — without excuses, without trying to rush you, and without asking you to forget what happened.</p>
+
+    <!-- IMAGE SLOT 1: put your image at images/01-cover.jpg -->
+    <figure class="photo-slot">
+      <img src="images/01-cover.jpg" alt="A special photo of us" onerror="this.style.display='none'; this.parentElement.classList.add('missing');" />
+      <div class="placeholder">Photo space — add <strong>images/01-cover.jpg</strong></div>
+    </figure>
+
+    <div class="buttons">
+      <a href="page2.html" class="btn primary">Please read this</a>
+      <a href="pagereturn.html" class="btn secondary">I’m not ready</a>
+    </div>
+    <div class="small">You don’t owe me an answer. I just hope you’ll let me say what I should have said.</div>
+  </main>
+</body>
+</html>

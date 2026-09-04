@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I Know I Hurt You</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; font-family: "Century Gothic", Arial, sans-serif; background: linear-gradient(145deg, #f8dfe3, #f3bfc8); color: #4b3337; display: flex; align-items: center; justify-content: center; padding: 24px; }
+    .card { width: min(720px,100%); background: rgba(255,255,255,.96); border-radius: 24px; padding: 44px 34px; box-shadow: 0 18px 55px rgba(95,46,58,.16); }
+    h1 { text-align: center; color: #6b3b46; font-size: clamp(2rem,5vw,2.8rem); margin-top: 0; }
+    p { line-height: 1.8; font-size: 1.08rem; }
+    .quote { margin: 28px 0; padding: 20px 22px; background: #fbf2f4; border-radius: 16px; color: #68434c; }
+    .photo-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; margin: 28px 0; }
+    .photo-slot { min-height: 220px; border-radius: 16px; overflow: hidden; background: #fbf2f4; border: 2px dashed #ddb5be; display: flex; align-items: center; justify-content: center; }
+    .photo-slot img { width: 100%; height: 250px; object-fit: cover; display: block; }
+    .placeholder { padding: 20px; text-align: center; color: #9a7079; font-size: .9rem; }
+    .photo-slot:not(.missing) .placeholder { display: none; }
+    .buttons { margin-top: 30px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { padding: 13px 22px; border-radius: 999px; text-decoration: none; font-weight: 700; }
+    .primary { background: #c86478; color: white; } .secondary { background: #f3e7e9; color: #6b3b46; }
+    @media (max-width: 560px) { .photo-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>I know I hurt you.</h1>
+    <p>I’m sorry for the pain my actions caused you. Whatever I was feeling, whatever I thought in the moment, none of it changes the fact that you were hurt because of me.</p>
+    <p>I don’t want to hide behind “I didn’t mean to.” Intent does not erase impact. You deserved care, honesty, patience and respect from me, especially from someone who said he loved you.</p>
+
+    <!-- IMAGE SLOTS 2 & 3: add images/02-memory.jpg and images/03-memory.jpg -->
+    <div class="photo-grid">
+      <figure class="photo-slot">
+        <img src="images/02-memory.jpg" alt="A memory together" onerror="this.style.display='none'; this.parentElement.classList.add('missing');" />
+        <div class="placeholder">Add <strong>images/02-memory.jpg</strong></div>
+      </figure>
+      <figure class="photo-slot">
+        <img src="images/03-memory.jpg" alt="Another memory together" onerror="this.style.display='none'; this.parentElement.classList.add('missing');" />
+        <div class="placeholder">Add <strong>images/03-memory.jpg</strong></div>
+      </figure>
+    </div>
+
+    <div class="quote">I am not asking you to pretend it did not happen. I am asking for the chance to take responsibility for it, learn from it, and show you through my actions that I can do better.</div>
+    <p>There are so many things about us that I still treasure, but I also understand that good memories do not cancel out the hurt. I want to acknowledge both.</p>
+    <div class="buttons">
+      <a href="page3.html" class="btn primary">Read my letter</a>
+      <a href="pagereturn.html" class="btn secondary">I need space</a>
+    </div>
+  </main>
+</body>
+</html>
